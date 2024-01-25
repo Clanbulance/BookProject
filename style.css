@@ -29,13 +29,14 @@ body{
     "left content content right"
     "left content content right"
     "left content content right"
-    "footer footer footer footer"
-
+    "footer footer footer footer"; 
+    margin: 0px;
+    background-color: bisque;
 }
 
 .header{
     grid-area: header;
-    background-color: rgb(214, 200, 200);
+    background-color: rgb(114, 110, 110);
     border-bottom: 2px solid grey;
     display: grid;
     justify-content: center;
@@ -47,7 +48,7 @@ body{
 
 .leftSideBar{
     grid-area: left;
-    background-color: blue;
+    background-color: rgb(63, 63, 68);
     justify-content: center;
     align-items: center;
 }
@@ -60,18 +61,40 @@ body{
 }
 
 .rightSideBar{
+    margin-top: 16px;
+    margin-bottom: 16px;
     grid-area: right;
-    background-color: green;
+    background-color: bisque;
+    border-left: 2px solid black;
+    padding:16px;
 }
 
 .content{
     grid-area: content;
     background-color: bisque;
     display: grid;
-    justify-content: center;
-    align-items: center;
+    padding:20px;
+    grid-template-columns: 25% 25% 25%;
+    grid-template-rows: 30% 30% 30% ;
+    gap:16px
 }
 
+.book{
+    border:2px solid black;
+    border-radius: 4px;
+    padding:4px;
+    background-color: rgb(240, 202, 166);
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(4, 25%);
+}
+
+#readCheckBox{
+    width: 18px;
+    border:3px solid red;
+    height: 18px;
+
+}
 
 .footer{
     display: grid;
@@ -79,6 +102,7 @@ body{
     grid-area: footer;
     background-color: rgba(0, 0, 0, 0.795);
     color:rgb(156, 146, 146);
+    font-size: 1vh;
 }
 
 :root{
