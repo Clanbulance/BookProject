@@ -32,6 +32,7 @@ body{
     "footer footer footer footer"; 
     margin: 0px;
     background-color: bisque;
+   
 }
 
 .header{
@@ -76,7 +77,8 @@ body{
     padding:20px;
     grid-template-columns: 25% 25% 25%;
     grid-template-rows: 30% 30% 30% ;
-    gap:16px
+    gap:16px;
+    
 }
 
 .book{
@@ -86,14 +88,20 @@ body{
     background-color: rgb(240, 202, 166);
     display:grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: repeat(4, 25%);
+    grid-template-rows: 25%;
 }
 
-#readCheckBox{
-    width: 18px;
-    border:3px solid red;
-    height: 18px;
+#AddButton{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
 
+#AddButton:hover{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blanchedalmond;
 }
 
 .footer{
@@ -104,6 +112,44 @@ body{
     color:rgb(156, 146, 146);
     font-size: 1vh;
 }
+
+
+.hiddenPopUp{
+    background-color: rgb(240, 202, 166);
+    width:20vw;
+    height: 40vh;
+    border:2px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    display:none;
+}
+
+.bookForm{
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(20%);
+    padding:32px;
+    gap:12px;
+    justify-content: center;
+
+}
+
+.closeBtn{
+    position: relative;
+    left:350px;
+    top:10px;
+    border:2px solid rgb(0, 0, 0);
+    display:flex;
+    height: fit-content;
+    border-radius: 4px;
+    padding:2px;
+    font-size: 2rm;
+}
+
+
 
 :root{
     --font-title: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -117,10 +163,23 @@ body{
         grid-template-rows: 5vh 40vh 40vh 10vh 5vh;
         grid-template-areas: 
        "header header "
-       "left content"
-       "left content"
+       "left left "
+       "content content"
+       "content content"
        "right right"
        "footer footer"
        ;
+    }
+
+
+    .content{
+        grid-area: content;
+        background-color: bisque;
+        display: grid;
+        padding:20px;
+        grid-template-columns: 75%;
+        grid-template-rows: 30% 30% 30% ;
+        gap:16px;
+        
     }
 }
