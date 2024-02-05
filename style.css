@@ -18,6 +18,7 @@ font-size: 100%;
 font: inherit;
 vertical-align: baseline;
 box-sizing: border-box;
+
 }
 
 body{
@@ -32,6 +33,7 @@ body{
     "footer footer footer footer"; 
     margin: 0px;
     background-color: bisque;
+   
    
 }
 
@@ -82,13 +84,14 @@ body{
 }
 
 .book{
-    border:2px solid black;
+    border:1px solid black;
     border-radius: 4px;
     padding:4px;
     background-color: rgb(240, 202, 166);
     display:grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 25%;
+    border-left:8px solid black;
 }
 
 #AddButton{
@@ -141,7 +144,6 @@ body{
     position: relative;
     left:350px;
     top:10px;
-    border:2px solid rgb(0, 0, 0);
     display:flex;
     height: fit-content;
     border-radius: 4px;
@@ -159,16 +161,29 @@ body{
 @media screen and (max-width:865px){
     body{
         display: grid;
-        grid-template-columns: 10vw 90vw;
-        grid-template-rows: 5vh 40vh 40vh 10vh 5vh;
+        grid-template-columns: 100vw;
+        grid-template-rows: 5vh 20vh 70vh 5vh;
         grid-template-areas: 
-       "header header "
-       "left left "
-       "content content"
-       "content content"
-       "right right"
-       "footer footer"
+       "header"
+       "left"
+       "content"
+       "footer"
        ;
+    }
+
+    .book{
+        border:2px solid black;
+        border-left:8px solid black;
+        border-radius: 4px;
+        padding:4px;
+        background-color: rgb(240, 202, 166);
+        display:grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 25%;
+        width:80vw;
+        height: 150px;
+        
+        
     }
 
 
@@ -177,9 +192,27 @@ body{
         background-color: bisque;
         display: grid;
         padding:20px;
-        grid-template-columns: 75%;
-        grid-template-rows: 30% 30% 30% ;
+        grid-template-columns: 100%;
+        grid-template-rows: 20vh ;
         gap:16px;
-        
+        height:100%;
+        border:2px solid red;
+        justify-content: center;
+    }
+
+    .hiddenPopUp{
+        background-color: rgb(134, 109, 86);
+        width:100vw;
+        border:2px solid rgb(0, 0, 0);
+        border-radius: 4px;
+        position: absolute;
+        display:none;
+    
+    }
+ 
+
+
+    .rightSideBar{
+        display: none;
     }
 }

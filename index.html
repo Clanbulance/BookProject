@@ -341,24 +341,23 @@
        
        </svg></div>
     </div>
-    <div class="rightSideBar">I'm not even sure what this is used for</div>
+    <div class="rightSideBar" id="righright">I'm not even sure what this is used for</div>
 
     <div class="content">
         <div class="book" id="AddButton" onclick=createNewBook()>Click to Add a book</div>
-
     </div>
     <div class="hiddenPopUp">
         <div class="closeBtn" onclick=closeMenu()>X</div>
         <form action="#" class="bookForm">
             <label for="title">Title:</label>
-            <input type="text" name="title" id="">
+            <input type="text" name="title" id="titleInput">
             <label for="author">Author:</label>
-            <input type="text" name="author">
+            <input type="text" name="author" id="authorInput">
             <label for="pages">Pages:</label>
-            <input type="number" name="pages" id="">
+            <input type="number" name="pages" id="numberInput">
             <label for="read">Did you complete the book?</label>
-            <input type="checkbox" name="read" id="">
-            <input type="submit" id="submit-btn" >
+            <input type="checkbox" name="read" id="checkboxInput" onchange=setValue()>
+            <button type="submit" id="submit-btn" >Add Book!</button>
 
         </form>
     </div>
