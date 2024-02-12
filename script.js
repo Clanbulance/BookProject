@@ -109,3 +109,4 @@ let setValue = function(){
 
 createBooks(myLibrary);
 
+let booksRead = myLibrary.filter((elem) => elem.read === "read");
