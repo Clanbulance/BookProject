@@ -39,13 +39,15 @@ body{
 
 .header{
     grid-area: header;
-    background-color: rgb(114, 110, 110);
-    border-bottom: 2px solid grey;
+    background-color: rgb(63, 63, 68);
+    background-color:transparent;
+    border-bottom: 16px solid rgb(63, 63, 68);
     display: grid;
     justify-content: center;
     align-items: center;
     font-size: 32px;
-    font-family: var(--font-title);
+    font-family: var(--font-title); 
+    
 }
 
 
